@@ -9,11 +9,12 @@ import java.util.logging.SimpleFormatter;
 public class LogUtil {
 
     private static final String NOMBRE = "Logger";
+    private static final int LONGITUD_FICHERO = 0;
 
     public static Logger crear(String ficheroLog) throws IOException {
         Logger logger = Logger.getLogger(NOMBRE);
 
-        if (logger.getHandlers().length == 0) {
+        if (logger.getHandlers().length == LONGITUD_FICHERO) {
             FileHandler fh = new FileHandler(ficheroLog, true);
             SimpleFormatter formato = new SimpleFormatter();
 
